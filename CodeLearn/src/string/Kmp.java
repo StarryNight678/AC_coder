@@ -1,5 +1,7 @@
 package string;
 
+import java.util.Arrays;
+
 /**
  * 字符串匹配
  * <p>
@@ -33,7 +35,7 @@ public class Kmp {
         }
 
         if (j == n) {
-            return i - 1;
+            return i - j;
         }
         return -1;
     }
@@ -44,21 +46,21 @@ public class Kmp {
      * @param pattern
      */
     void genNext(String pattern, int[] next) {
-
-
+        char[] patternCharArr = pattern.toCharArray();
         int len = pattern.length();
         int k = -1;
         int j = 0;
         next[j] = k;
 
         while (j < len - 1) {
-
-            if(){
-
+            if (k == -1 || patternCharArr[k] == patternCharArr[j]) {
+                k++;
+                j++;
+                next[j] = k;
+            } else {
+                k = next[k];
             }
-
         }
-
     }
 
     /**
@@ -88,23 +90,26 @@ public class Kmp {
         }
 
         if (j == n) {
-            return i - 1;
+            return i - j;
         }
         return -1;
     }
 
     public static void main(String[] args) {
         String str = "ababcabcacbab";
-        String pattern = "abcac";
-
+//        String pattern = "abcac";
+        String pattern = "aabcaac";
+        System.out.println(str);
+        System.out.println(pattern);
         Kmp kmp = new Kmp();
         int pos = kmp.basic(str, pattern);
         System.out.println(pos);
 
         int[] next = new int[pattern.length()];
         kmp.genNext(pattern, next);
+        System.out.println("next[]:"+ Arrays.toString(next));
         int posKmp = kmp.kmp(str, pattern, next);
-
+        System.out.println(posKmp);
     }
 
 }
