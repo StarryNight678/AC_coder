@@ -48,8 +48,8 @@ public class Kmp {
     void genNext(String pattern, int[] next) {
         char[] patternCharArr = pattern.toCharArray();
         int len = pattern.length();
-        int k = -1;
         int j = 0;
+        int k = -1;
         next[j] = k;
 
         while (j < len - 1) {
@@ -107,7 +107,7 @@ public class Kmp {
 
         int[] next = new int[pattern.length()];
         kmp.genNext(pattern, next);
-        System.out.println("next[]:"+ Arrays.toString(next));
+        System.out.println("next[]:" + Arrays.toString(next));
         int posKmp = kmp.kmp(str, pattern, next);
         System.out.println(posKmp);
     }
