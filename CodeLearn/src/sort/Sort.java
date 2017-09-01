@@ -91,13 +91,68 @@ public class Sort {
         }
     }
 
+
+    /**
+     * 堆调整,调整为的最大堆
+     *
+     * @param arr
+     * @param i
+     * @param size
+     */
+    void heapAdjust(int[] arr, int i, int size) {
+
+        int max = -1;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        if (left > size) {
+            return;
+        }
+
+        if (right > size) {
+            max = left;
+        } else if (arr[left] > arr[right]) {
+            max = left;
+        } else {
+            max = right;
+        }
+
+        if (arr[i] < arr[max]) {
+            int tmp = arr[i];
+            arr[i] = arr[max];
+            arr[max] = tmp;
+        }
+
+        //递归修改
+        heapAdjust(arr, max, size);
+
+
+    }
+
+
+    void builtHeap(int[] arr) {
+
+        int size = arr.length;
+        for (int i = size - 1; i >= 0; i--) {
+            heapAdjust(arr, i, size - 1);
+        }
+    }
+
     /**
      * 堆排序
      *
      * @param arr
      */
     void heapSort(int arr[]) {
+        int size = arr.length;
+        builtHeap(arr);
 
+        for (int i = size - 1; i >= 0; i--) {
+            int tmp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = tmp;
+            heapAdjust(arr, 0, i - 1);
+        }
 
     }
 
@@ -115,7 +170,7 @@ public class Sort {
             sortArr[arr[i]]++;
         }
 
-        System.out.println("计数排序:");
+        System.out.print("计数排序:");
         for (int j = 0; j < sortArr.length; j++) {
             int size = sortArr[j];
             if (size > 0) {
@@ -147,7 +202,10 @@ public class Sort {
         System.out.println("冒泡排序:" + Arrays.toString(maoPaoSortArr));
         int[] jiShuSortArr = arr;
         sort.jiShuSort(jiShuSortArr, 100);
-//        System.out.println("计数排序:"+Arrays.toString(jiShuSortArr));
+
+        int[] heapSortArr = arr;
+        sort.heapSort(heapSortArr);
+        System.out.println("堆排序:" + Arrays.toString(heapSortArr));
 
 
     }
