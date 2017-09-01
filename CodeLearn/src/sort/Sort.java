@@ -22,6 +22,14 @@ public class Sort {
         }
     }
 
+    /**
+     * 快速排序
+     *
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
     int qsortFun(int arr[], int start, int end) {
         int flag = arr[start];
         int m = end;
@@ -72,11 +80,11 @@ public class Sort {
      */
     void maoPaoSort(int arr[]) {
         int len = arr.length;
-        for (int i = 0; i < len; i++) {
-            for (int j = i + 1; j < len; j++) {
-                if (arr[i] > arr[j]) {
-                    int tmp = arr[i];
-                    arr[i] = arr[j];
+        for (int i = 0; i < len - 1; i++) {
+            for (int j = 0; j < len - 1 - i; j++) {
+                if (arr[j + 1] < arr[j]) {
+                    int tmp = arr[j + 1];
+                    arr[j + 1] = arr[j];
                     arr[j] = tmp;
                 }
             }
@@ -107,12 +115,13 @@ public class Sort {
             sortArr[arr[i]]++;
         }
 
+        System.out.println("计数排序:");
         for (int j = 0; j < sortArr.length; j++) {
-            int size=sortArr[j];
-            if (size> 0) {
+            int size = sortArr[j];
+            if (size > 0) {
 
-                while(size>0){
-                    System.out.print(" "+j);
+                while (size > 0) {
+                    System.out.print(" " + j);
                     size--;
                 }
             }
@@ -125,14 +134,21 @@ public class Sort {
 
         Sort sort = new Sort();
         int arr[] = {1, 4, 4, 8, 3, 9, 21, 55, 77, 88};
-
+        System.out.println("原始数组");
         System.out.println(Arrays.toString(arr));
-//        sort.insertSort(arr);
-//        sort.qsort(arr, 0, arr.length - 1);
-//        sort.maoPaoSort(arr);
-//        sort.jiShuSort(arr,100);
+        int[] insertSortArr = arr;
+        sort.insertSort(insertSortArr);
+        System.out.println("插入排序:" + Arrays.toString(insertSortArr));
+        int[] qsortArr = arr;
+        sort.qsort(qsortArr, 0, arr.length - 1);
+        System.out.println("快速排序:" + Arrays.toString(qsortArr));
+        int[] maoPaoSortArr = arr;
+        sort.maoPaoSort(maoPaoSortArr);
+        System.out.println("冒泡排序:" + Arrays.toString(maoPaoSortArr));
+        int[] jiShuSortArr = arr;
+        sort.jiShuSort(jiShuSortArr, 100);
+//        System.out.println("计数排序:"+Arrays.toString(jiShuSortArr));
 
 
-        System.out.println(Arrays.toString(arr));
     }
 }
