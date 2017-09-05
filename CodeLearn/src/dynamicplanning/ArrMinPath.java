@@ -1,6 +1,7 @@
 package dynamicplanning;
 
 /**
+ * 矩阵最小路径和
  * create by  ZhouJianhua  2017/9/2
  * Email: zjhua678@163.com
  */

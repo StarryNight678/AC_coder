@@ -213,5 +213,17 @@ public class BaggageLoading {
         BaggageLoading basicBaggage = new BaggageLoading(w, value);
         System.out.println("basicBaggage max vlaue:" + basicBaggage.basicBaggage(T, len));
 
+        /*
+        int[] w = {2, 2, 6, 5, 4};
+        int[] value = {6, 3, 5, 4, 6};
+        动态规划数组
+            0	0	0	0	0	0	0	0	0	0	0
+            0	0	6	6	6	6	6	6	6	6	6
+            0	0	6	6	9	9	9	9	9	9	9
+            0	0	6	6	9	9	9	9	11	11	14
+            0	0	6	6	9	9	9	10	11	13	14
+            0	0	6	6	9	9	12	12	15	15	15
+         */
+
     }
 }
