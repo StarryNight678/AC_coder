@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MinCoinChange.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dynamicplanning/MinCoinChange.java">
+      <file leaf-file-name="LongestIncreasingSubsequence.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dynamicplanning/LongestIncreasingSubsequence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="123">
+              <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -107,6 +107,7 @@
         <option value="$PROJECT_DIR$/src/datastruct/BaggageLoading.java" />
         <option value="$PROJECT_DIR$/src/dynamicplanning/ArrMinPath.java" />
         <option value="$PROJECT_DIR$/src/dynamicplanning/MinCoinChange.java" />
+        <option value="$PROJECT_DIR$/src/dynamicplanning/LongestIncreasingSubsequence.java" />
       </list>
     </option>
   </component>
@@ -476,7 +477,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MinCoinChange">
+  <component name="RunManager" selected="Application.LongestIncreasingSubsequence">
     <configuration name="ArrMinPath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -515,9 +516,14 @@
       <module name="CodeLearn" />
       <envs />
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="LongestIncreasingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dynamicplanning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="dynamicplanning.LongestIncreasingSubsequence" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -649,19 +655,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.BaggageLoading" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MaxMultiplicationSubArr" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ArrMinPath" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MinCoinChange" />
+      <item index="0" class="java.lang.String" itemvalue="Application.BaggageLoading" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MaxMultiplicationSubArr" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ArrMinPath" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MinCoinChange" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LongestIncreasingSubsequence" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MinCoinChange" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ArrMinPath" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MaxMultiplicationSubArr" />
-        <item index="3" class="java.lang.String" itemvalue="Application.BaggageLoading" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LongestIncreasingSubsequence" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MinCoinChange" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ArrMinPath" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MaxMultiplicationSubArr" />
+        <item index="4" class="java.lang.String" itemvalue="Application.BaggageLoading" />
       </list>
     </recent_temporary>
   </component>
@@ -685,12 +691,12 @@
       <workItem from="1504188703895" duration="20915000" />
       <workItem from="1504340515424" duration="23438000" />
       <workItem from="1504404876025" duration="16078000" />
-      <workItem from="1504577953834" duration="19549000" />
+      <workItem from="1504577953834" duration="22759000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137845000" />
+    <option name="totallyTimeSpent" value="141055000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -755,7 +761,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3243874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31038508" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1416309" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -790,14 +796,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/datastruct/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="48" column="2" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="54" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/string/Kmp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
@@ -1139,7 +1137,15 @@
     <entry file="file://$PROJECT_DIR$/src/dynamicplanning/MinCoinChange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dynamicplanning/LongestIncreasingSubsequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
           <folding />
         </state>
       </provider>

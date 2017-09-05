@@ -76,7 +76,7 @@ public class MinCoinChange {
         //  d[i][j] =  d[i-1][j] +  d[i][j-arr[i]]
         for (int i = 1; i < m; i++) {
             for (int j = 1; j <= aim; j++) {
-                
+
                 if ((j - arr[i]) >= 0) {
                     d[i][j] = d[i - 1][j] + d[i][j - arr[i]];
                 } else {
