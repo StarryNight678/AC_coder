@@ -48,7 +48,11 @@ public class LongestIncreasingSubsequence {
         }
         System.out.println(Arrays.toString(data));
 
-        return arr[arr.length - 1];
+        int max = data[0];
+        for (int i = 1; i < data.length; i++) {
+            max = Math.max(max, data[i]);
+        }
+        return max;
     }
 
 
@@ -60,15 +64,46 @@ public class LongestIncreasingSubsequence {
      */
     int LongestSubLogN(int[] arr) {
 
+        int len = arr.length;
+        int[] dp = new int[len];
+        int[] ends = new int[len];
+        ends[0] = arr[0];
+        dp[0] = 1;
+        int right = 0;
+        int l = 0;
+        int r = 0;
+        int m = 0;
+        for (int i = 1; i < len; i++) {
+            l = 0;
+            r = right;
+            while (l <= r) {
+                m = (r + r) / 2;
+                if (arr[i] > ends[m]) {
+                    l = m + 1;
+                } else {
+                    r = m - 1;
+                }
+            }
+            right = Math.max(right, l);
+            ends[l] = arr[i];
+            dp[i] = l + 1;
+        }
 
-        return 1;
+        System.out.println("dp  :" + Arrays.toString(dp));
+        System.out.println("ends:" + Arrays.toString(ends));
+        int max = dp[0];
+        for (int i = 1; i < dp.length; i++) {
+            max = Math.max(max, dp[i]);
+        }
+        return max;
     }
+
 
     public static void main(String[] args) {
 
         int[] arr = {2, 1, 5, 3, 6, 4, 8, 9, 7};
         LongestIncreasingSubsequence longestIncreasingSubsequence = new LongestIncreasingSubsequence();
-        System.out.println("" + longestIncreasingSubsequence.LongestSub(arr));
-
+        System.out.println("N*N  最长递增子序列:" + longestIncreasingSubsequence.LongestSub(arr));
+        System.out.println("N*logN 最长递增子序列:" + longestIncreasingSubsequence.LongestSubLogN(arr));
     }
 }
