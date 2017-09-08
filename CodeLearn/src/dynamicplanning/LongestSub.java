@@ -4,6 +4,8 @@ package dynamicplanning;
  * 最长公共子串
  * <p>
  * 注意:子串是连续的
+ *
+ * data[i][j] = data[i - 1][j - 1] + 1;
  * create by  ZhouJianhua  2017/9/6
  * Email: zjhua678@163.com
  */

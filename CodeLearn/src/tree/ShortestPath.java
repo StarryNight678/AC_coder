@@ -4,8 +4,10 @@ package tree;
  * 最短路径
  * <p>
  * 注意:
- * 1. k 必须放到最外面
+ * 1. k必须放到最外面
  * 2. path[i][j] = path[i][k];//这个需要注意
+ *
+ * 参考: https://github.com/StarryNight678/code_interview/blob/master/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84.md
  * create by  ZhouJianhua  2017/8/31
  * Email: zjhua678@163.com
  */
@@ -27,6 +29,7 @@ public class ShortestPath {
                 path[i][j] = j;
             }
         }
+
         //注意: k必须放到最外面
         for (int k = 0; k < size; k++) {
             for (int i = 0; i < size; i++) {

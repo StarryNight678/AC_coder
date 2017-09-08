@@ -46,8 +46,8 @@ public class PassWord {
         if (n1 + n2 + n3 + n3 < 3) {
             return "NG";
         }
-        //3.不能有相同长度超2的子串重复
 
+        //3.不能有相同长度超2的子串重复
         for (int i = 0; i < s1.length() - 3; i++) {
             String m1 = s1.substring(i, i + 3);
             String m2 = s1.substring(i + 3, s1.length());

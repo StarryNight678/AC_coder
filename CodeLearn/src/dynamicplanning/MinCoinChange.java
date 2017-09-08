@@ -59,6 +59,8 @@ public class MinCoinChange {
 
         int m = arr.length;
 
+
+        //d[i][j]在使用前i种钱,得到j的方案数.
         int[][] d = new int[m][aim + 1];
         if (arr == null || arr.length == 0 || aim < 0) {
             return 0;
@@ -74,13 +76,14 @@ public class MinCoinChange {
 
 
         //  d[i][j] =  d[i-1][j] +  d[i][j-arr[i]]
+        // 这个是递推关系
         for (int i = 1; i < m; i++) {
             for (int j = 1; j <= aim; j++) {
 
                 if ((j - arr[i]) >= 0) {
                     d[i][j] = d[i - 1][j] + d[i][j - arr[i]];
                 } else {
-                    d[i][j] = d[i - 1][j];
+                    d[i][j] = d[i - 1][j];//不使用arr[i]的钱数
                 }
 
             }

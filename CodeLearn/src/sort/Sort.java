@@ -130,6 +130,11 @@ public class Sort {
     }
 
 
+    /**
+     * 创建堆
+     *
+     * @param arr
+     */
     void builtHeap(int[] arr) {
 
         int size = arr.length;

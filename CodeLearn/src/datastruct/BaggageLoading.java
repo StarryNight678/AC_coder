@@ -138,7 +138,7 @@ public class BaggageLoading {
                     d[i][j] = 0;
                 }
 
-                //  d[i][j]= max{ d[i-1][j] , d[i-1][j-w[i-1]] }
+                //  d[i][j]= max{ d[i-1][j] , d[i-1][j-w[i-1]]+value[i - 1]}
                 if (i >= 1 && (j - w[i - 1]) >= 0 && (d[i][j - w[i - 1]] + value[i - 1]) > d[i - 1][j]) {
                     d[i][j] = d[i - 1][j - w[i - 1]] + value[i - 1];
                 } else {

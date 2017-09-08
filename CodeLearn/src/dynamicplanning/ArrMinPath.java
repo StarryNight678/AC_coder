@@ -2,6 +2,9 @@ package dynamicplanning;
 
 /**
  * 矩阵最小路径和
+ * <p>
+ * ath[i][j] = arr[i][j] + Math.min(path[i - 1][j], path[i][j - 1]);
+ * <p>
  * create by  ZhouJianhua  2017/9/2
  * Email: zjhua678@163.com
  */
@@ -41,6 +44,15 @@ public class ArrMinPath {
                 path[i][j] = arr[i][j] + Math.min(path[i - 1][j], path[i][j - 1]);
             }
         }
+
+//path
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(String.format("%d\t", path[i][j]));
+            }
+            System.out.println();
+        }
+
         return path[m - 1][n - 1];
 
     }

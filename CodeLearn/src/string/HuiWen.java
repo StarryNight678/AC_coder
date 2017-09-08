@@ -92,6 +92,7 @@ public class HuiWen {
 
         HuiWen huiWen = new HuiWen();
         String str = "madam";
+
         char[] arr = str.toCharArray();
         System.out.println(Arrays.toString(arr));
 

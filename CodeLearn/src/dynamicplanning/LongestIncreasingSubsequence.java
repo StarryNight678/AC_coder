@@ -57,7 +57,9 @@ public class LongestIncreasingSubsequence {
 
 
     /**
-     * log(N)的复杂度
+     * N*log(N)的复杂度
+     * <p>
+     * 二叉进行搜索
      *
      * @param arr
      * @return

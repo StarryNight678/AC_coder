@@ -46,8 +46,6 @@ public class MaxSubArr {
         }
 
         return max;
-
-
     }
 
     public static void main(String[] args) {
