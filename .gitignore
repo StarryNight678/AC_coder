@@ -1,2 +1,3 @@
-.idea/vcs.xml
-CodeLearn/.idea/CodeLearn.iml
+.idea/*
+*.class
+CodeLearn/.idea/*
